@@ -1,0 +1,27 @@
+import random
+while True:
+    user_action = input("Сделайте выбор: камень, ножницы, бумага: ")
+    possible_actions = ["камень", "бумага", "ножницы"]
+    computer_action = random.choice(possible_actions)
+    print(f"\nВы выбрали {user_action}, противник выбрал {computer_action}.\n")
+    if user_action == computer_action:
+        print(f"Оба пользователя выбрали {user_action}. Ничья!!")
+    elif user_action == "камень":
+        if computer_action == "ножницы":
+            print("Камень бьет ножницы! Победа!")
+        else:
+            print("Бумага накрывает камень! Поражение.")
+    elif user_action == "бумага":
+        if computer_action == "камень":
+            print("Бумага накрывает камень! Победа!")
+        else:
+            print("Ножницы режут бумагу! Поражение.")
+    elif user_action == "ножницы":
+        if computer_action == "бумага":
+            print("Ножницы режут бумагу! Победа!")
+        else:
+            print("Камень бьет ножницы! Поражение.")
+    play_again = ""
+    play_again = input("Сыграем еще? (д/н): ")
+    if play_again.lower() != "д":
+        break 
