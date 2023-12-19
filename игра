@@ -3,7 +3,7 @@ while True:
     user_action = input("Сделайте выбор: камень, ножницы, бумага: ")
     possible_actions = ["камень", "бумага", "ножницы"]
     computer_action = random.choice(possible_actions)
-    print(f"\nВы выбрали {user_action}, противник выбрал {computer_action}.\n")
+    print(f"Вы выбрали {user_action}, противник выбрал {computer_action}.")
     if user_action == computer_action:
         print(f"Оба пользователя выбрали {user_action}. Ничья!!")
     elif user_action == "камень":
